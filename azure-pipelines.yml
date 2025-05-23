@@ -2,15 +2,15 @@ trigger:
 - main  # Trigger the pipeline when there is a push to the main branch
 
 pool:
-  name: Default
-  demands:
-    - agent.name -equals default
-    - maven
-    - Agent.Version -gtVersion 4.255.0
 
+  name: Default   # Or your custom pool name
+
+  demands:
+
+    - agent.name -equals MyLinuxAgent
 steps:
 # Step 1: Maven Build and Test Execution
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'  # Ensure your pom.xml is at the repository root
     goals: 'clean test package'  # This will clean, compile, and package your application
