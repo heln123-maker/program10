@@ -2,12 +2,12 @@ trigger:
 - main  # Trigger the pipeline when there is a push to the main branch
 
 pool:
-
-  name: Default   # Or your custom pool name
-
+  name: Default
   demands:
-
     - agent.name -equals MyLinuxAgent
+    - maven
+    - Agent.Version -gtVersion 2.163.1
+
 steps:
 # Step 1: Maven Build and Test Execution
 - task: Maven@4
