@@ -6,7 +6,7 @@ pool:
   demands:
     - agent.name -equals MyLinuxAgent
     - maven
-    - Agent.Version -gtVersion 2.163.1
+    - Agent.Version -gtVersion 3.229.2
 
 steps:
 # Step 1: Maven Build and Test Execution
