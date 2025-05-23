@@ -4,7 +4,7 @@ trigger:
 pool:
   name: Default
   demands:
-    - agent.name -equals MyLinuxAgent
+    - agent.name -equals DESKTOP-NI86GIR
     - maven
     - Agent.Version -gtVersion 3.229.2
 
