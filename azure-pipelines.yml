@@ -2,12 +2,8 @@ trigger:
 - main  # Trigger the pipeline when there is a push to the main branch
 
 pool:
-
   name: Default   # Or your custom pool name
 
-  demands:
-
-    - agent.name -equals DESKTOP-NI86GIR
 steps:
 # Step 1: Maven Build and Test Execution
 - task: Maven@4
