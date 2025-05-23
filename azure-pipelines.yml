@@ -7,7 +7,7 @@ pool:
 
   demands:
 
-    - agent.name -equals MyLinuxAgent
+    - agent.name -equals DESKTOP-NI86GIR
 steps:
 # Step 1: Maven Build and Test Execution
 - task: Maven@4
